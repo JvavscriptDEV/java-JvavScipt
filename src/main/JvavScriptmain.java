@@ -2,8 +2,7 @@ package main;
 import java.util.*;
 
 public class JvavScriptmain {
-	public static void cout(String whattooutput)
-	{
+	public static void cout(String whattooutput) {
 		System.out.print(whattooutput);
 		return;
 	}
@@ -22,35 +21,29 @@ public class JvavScriptmain {
 		while(true)
 		{
 			temp = in.nextLine();
-			if(temp.equals("help"))
-			{
+			if(temp.equals("help"))	{
 				System.out.println("JvavScript Java Help:\n");
 				cout("version\t:\toutput version of Java-Jvavscript.\n");
 				cout("input\t:\tinput a string for nothing.\n");
 				cout("output\t:\toutput a strong.\n");
 				cout("exit or exit()\t:\texit.\n");
 			}
-			else if(temp.equals("input"))
-			{
+			else if(temp.equals("input")) {
 					System.out.print("Inputing>");
 					temp=in.nextLine();
 			}
-			else if(temp.equals("output"))
-			{
+			else if(temp.equals("output")) {
 					System.out.print("Enter the word you want output>");
 					temp=in.nextLine();
 					System.out.println(temp);
 			}
-			else if(temp.equals("exit") || temp.equals("exit()"))
-			{
+			else if(temp.equals("exit") || temp.equals("exit()")) {
 				return;
 			}
-			else if(temp.equals("version"))
-			{
+			else if(temp.equals("version"))	{
 				System.out.println(version);
 			}
-			else
-			{
+			else {
 					System.out.println("ERROR : unknown command!");
 			}
 			System.out.print("JvavScript>");

@@ -36,8 +36,6 @@ public class JvavScriptmain {
 			}
 			System.out.print("JvavScript>");
 		}
-		/// this is a easy java program
-		/// and it is ~~reeeeeeeeeeeeeeeally useless~~
-		/// \_(ツ)_/
+		// \_(ツ)_/
 	}
 }

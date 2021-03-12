@@ -7,7 +7,7 @@ public class JvavScriptmain {
 		return;
 	}
 	public static void main(String[] agrs) {
-		String version = "2.0.2";
+		String version = "2.0.3";
 		System.out.println("===================JVAVSCRIPT=================");
 		System.out.println("|                                            |");
 		System.out.println("|            Joked BY Dr.HY_Z                |");

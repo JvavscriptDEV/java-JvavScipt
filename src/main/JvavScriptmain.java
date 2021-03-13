@@ -2,12 +2,15 @@ package main;
 import java.util.*;
 
 public class JvavScriptmain {
-	public static void cout(String whattooutput) {
-		System.out.print(whattooutput);
+	
+	public static final String VERSION = "2.0.4"; //define constant
+	
+	public static void cout(Object whattooutput) { // use Object to let this parameter can be any data type like boolean, int etc.
+		System.out.print(whattooutput.toString()); 
 		return;
 	}
+	
 	public static void main(String[] agrs) {
-		String version = "2.0.3";
 		System.out.println("===================JVAVSCRIPT=================");
 		System.out.println("|                                            |");
 		System.out.println("|            Joked BY Dr.HY_Z                |");
@@ -15,57 +18,42 @@ public class JvavScriptmain {
 		System.out.println("|          Type \"help\" for help            |");
 		System.out.println("|                                            |");
 		System.out.println("==============================================");
-		System.out.print("JvavScript>");
+		cout("JvavScript>");
 		Scanner in = new Scanner(System.in);
 		String temp = null;
 		while((temp = in.nextLine()) != null)
 		{
 			switch(temp) {
-				case "":
+				case "":   // if 'temp' is empty, do nothing
 					break;
 				case "input":
-					System.out.print("Inputing>");
+					cout("Inputing>");
 					temp=in.nextLine();
 					break;
 				case "output":
-					System.out.print("Enter the word you want output>");
+					cout("Enter the word you want output>");
 					temp=in.nextLine();
 					System.out.println(temp);
 					break;
 				case "exit":
 				case "exit()":
 					return;
+				case "help":
+					System.out.println("JvavScript Java Help:\n");
+					cout("version\t:\toutput version of Java-Jvavscript.\n");
+					cout("input\t:\tinput a string for nothing.\n");
+					cout("output\t:\toutput a string.\n");
+					cout("exit or exit()\t:\texit.\n");
+					break;
+				case "version":
+					System.out.println(VERSION);
+					break;
 				default:
-			temp = in.nextLine();
-			if(temp.equals("help"))	{
-				System.out.println("JvavScript Java Help:\n");
-				cout("version\t:\toutput version of Java-Jvavscript.\n");
-				cout("input\t:\tinput a string for nothing.\n");
-				cout("output\t:\toutput a strong.\n");
-				cout("exit or exit()\t:\texit.\n");
-			}
-			else if(temp.equals("input")) {
-					System.out.print("Inputing>");
-					temp=in.nextLine();
-			}
-			else if(temp.equals("output")) {
-					System.out.print("Enter the word you want output>");
-					temp=in.nextLine();
-					System.out.println(temp);
-			}
-			else if(temp.equals("exit") || temp.equals("exit()")) {
-				return;
-			}
-			else if(temp.equals("version"))	{
-				System.out.println(version);
-			}
-			else {
 					System.out.println("ERROR : unknown command!");
 					break;
 			}
-			System.out.print("JvavScript>");
+			cout("JvavScript>");
+			/// \_(ツ)_/
 		}
-		/// \_(ツ)_/
-	}
 	}
 }
